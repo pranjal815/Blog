@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= yield(:page_title) %> | PISTISBlog</title>
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+  <%= render 'shared/navbar' %>
+  <div class="container <%= controller_name %> <%= action_name %>">
+    <%= yield %>
+  </div>
+  <%= render 'shared/footer' %>
+  <% debug(params) if Rails.env.development? %>
+  </body>
+</html>

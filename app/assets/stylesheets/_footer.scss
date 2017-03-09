@@ -1,0 +1,34 @@
+html,body
+{
+  height:auto;
+}
+
+#wrap
+{
+  min-height: 100%;
+}
+
+#main
+{
+  overflow:auto;
+  padding-bottom:auto; /* this needs to be bigger than footer height*/
+}
+
+.footer {
+  .fbicon, .twicon, .pticon {
+     display: inline-block;
+     float: right;
+     position: relative;
+   }
+  display: inline-block;
+  position: relative;
+  text-align: left;
+  left:0px;
+  bottom:0px;
+  height:auto;
+  width:100%;
+  background:#999;
+  color: #ffffff;
+}
+
+
