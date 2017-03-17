@@ -21,7 +21,7 @@
 .byebug_history
 
 #Ignore Local Variables
-.env
+
 Procfile
 config/database.yml
 # Elastic Beanstalk Files
