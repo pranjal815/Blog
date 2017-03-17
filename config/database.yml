@@ -1,0 +1,31 @@
+# postgresql
+#   gem install postgresql
+#
+#   Ensure the postgresql gem is defined in your Gemfile
+#   gem 'pg'
+#
+
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: pistis_blog
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") {5} %>
+
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: pistis_blog_test
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") {5} %>
+
+
+
+# Warning: The database defined as "test" will be erased and
+# re-generated from your development database when you run "rake".
+
+production:
+  database: <%= ENV['RDS_DB_NAME'] %>
+  username: <%= ENV['RDS_USERNAME'] %>
+  password: <%= ENV['RDS_PASSWORD'] %>
+  host: <%= ENV['RDS_HOSTNAME'] %>
+  port: <%= ENV['RDS_PORT'] %>
