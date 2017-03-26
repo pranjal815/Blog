@@ -1,0 +1,23 @@
+body {
+  background-color: $light-gray;
+}
+
+h1, .card-title{
+  font-weight: bold;
+}
+
+h4 {
+  color: $secondary-text-color;
+  font-weight: lighter;
+}
+
+h1 ,h2 ,h3, h4, h5, h6 {
+   font-family: 'Lobster', cursive;
+   color: #212121;
+}
+
+p p span{
+  font-family: 'Crimson Text', serif !important;
+  color: #212121;
+  font-size: 20px;
+}

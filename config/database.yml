@@ -10,16 +10,21 @@ development:
   encoding: unicode
   database: pistis_blog
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") {5} %>
-  username: root
-  password: pran_pis_blog_123
+  #username: root
+  #password: pran_pis_blog_123
+  username: postgres
+  password: gauhar@12
 
 test:
   adapter: postgresql
   encoding: unicode
   database: pistis_blog_test
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") {5} %>
-  username: root
-  password: pran_pis_blog_123
+  #username: root
+  #password: pran_pis_blog_123
+  username: postgres
+  password: gauhar@12
+
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".

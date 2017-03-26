@@ -36,9 +36,6 @@
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
         <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
       </button>
 
       <a class="navbar-brand" href="/"><img class="img-responsive2" src ="http://www.pistis.com.mx/skin/frontend/ultimo/default/images/logo.png"> </a>
@@ -67,18 +64,22 @@
           <li class="nav-item">
             <%= link_to 'Contact', contact_path, class: "nav-link #{yield(:contact_active)}" %>
           </li>
-          <% if author_signed_in? %>
-              <li class="nav-item">
-                <%= link_to 'My Post', authors_posts_path, class: "nav-link #{yield(:author)}" %>
-              </li>
-            <li class="nav-item">
-              <%= link_to 'Log Out', destroy_author_session_path, method: :delete, class: "nav-link" %>
-            </li>
-          <% else %>
-            <li class="nav-item">
-              <%= link_to 'Sign In', authors_posts_path, class: "nav-link #{yield(:author)}" %>
-            </li>
-          <% end %>
+          <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle <%= yield(:author) %>" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Authors
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <% if author_signed_in? %>
+                    <%= link_to 'My Post', authors_posts_path, class: "dropdown-item " %>
+                      <br>
+                    <%= link_to 'Account', authors_account_path, class: "dropdown-item" %>
+                      <br>
+                    <%= link_to 'Log Out', destroy_author_session_path, method: :delete, class: "dropdown-item" %>
+                <% else %>
+                    <%= link_to 'Sign In', authors_posts_path, class: "dropdown-item" %>
+                <% end %>
+              </div>
+          </li>
         </ul>
       </ul>
     </div><!-- /.navbar-collapse -->

@@ -8,6 +8,9 @@ Rails.application.routes.draw do
   resources "contacts", only: [:new, :create]
 
   namespace :authors do
+    get '/account' => 'accounts#edit', as: :account
+    put '/info' => 'accounts#update_info', as: :info
+    put '/change_password' => 'accounts#change_password', as: :change_password
     resources :posts do
       put 'published' => 'posts#publish', on: :member
       put 'unpublished' => 'posts#unpublish', on: :member

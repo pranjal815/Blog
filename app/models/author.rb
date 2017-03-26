@@ -25,4 +25,6 @@ class Author < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
 
   has_many :posts
+
+  validates_presence_of :name, on: :update
 end
