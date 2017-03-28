@@ -27,3 +27,6 @@ Procfile
 .elasticbeanstalk/*
 !.elasticbeanstalk/*.cfg.yml
 !.elasticbeanstalk/*.global.yml
+
+#Tmp file
+/tmp/cache/*
