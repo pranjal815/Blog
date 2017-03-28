@@ -77,7 +77,9 @@
                     <%= link_to 'Log Out', destroy_author_session_path, method: :delete, class: "dropdown-item" %>
                 <% else %>
                     <%= link_to 'Sign In', authors_posts_path, class: "dropdown-item" %>
-                <% end %>
+                      <br>
+                    <%= link_to 'Sign Up', signup_path, class: "dropdown-item" %>
+              <% end %>
               </div>
           </li>
         </ul>

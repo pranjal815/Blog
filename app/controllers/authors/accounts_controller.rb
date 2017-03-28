@@ -7,21 +7,19 @@ module Authors
       if current_author.update(author_info_params)
         flash[:success] = 'Congrats!! Successfully updated your information.'
       else
-        flash[:danger] = current_author.errors.full_messages.join('. ') << '.'
+        flash[:danger] = current_author.display_error_message
       end
       redirect_to authors_account_path
     end
 
     def change_password
-      #password or confirmation password is blank
-      #password or confirmation don't match
-      if current_author.valid_password?(author_password_params[:current_password])
-         if current_author.update(
-             password: author_password_params[:new_password],
-             password_confirmation: author_password_params[:new_password_confirmation])
+      author = current_author
+      if author.valid_password?(author_password_params[:current_password])
+         if author.change_password(author_password_params)
+             sign_in(author, bypass: true)
              flash[:success] = "Successfully changed the password!!!"
          else
-             flash[:danger] = current_author.errors.full_messages.join('. ') << '.'
+             flash[:danger] = author.display_error_message
          end
       else
          flash[:danger] = 'Current password is wrong!!'

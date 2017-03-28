@@ -27,4 +27,18 @@ class Author < ApplicationRecord
   has_many :posts
 
   validates_presence_of :name, on: :update
+
+  def change_password(attributes)
+    update(password: attributes[:new_password], password_confirmation: attributes[:new_password_confirmation])
+  end
+
+  def gravatar_image_url
+    "https://www.gravatar.com/avatar/#{gravtar_hash}"
+  end
+
+  private
+
+  def gravtar_hash
+    Digest::MD5.hexdigest(email.downcase)
+  end
 end

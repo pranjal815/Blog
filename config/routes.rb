@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   devise_for :authors
   root to: 'blog/posts#index'
 
+  get '/signup' => 'signups#create_author'
+
   #Contact us Page routes
   match '/contact', to: 'contacts#new', via: 'get'
   resources "contacts", only: [:new, :create]
@@ -11,6 +13,7 @@ Rails.application.routes.draw do
     get '/account' => 'accounts#edit', as: :account
     put '/info' => 'accounts#update_info', as: :info
     put '/change_password' => 'accounts#change_password', as: :change_password
+
     resources :posts do
       put 'published' => 'posts#publish', on: :member
       put 'unpublished' => 'posts#unpublish', on: :member
