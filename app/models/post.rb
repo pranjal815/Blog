@@ -16,7 +16,6 @@
 #
 
 class Post < ApplicationRecord
-  make_flagger
   has_many :comments
 
   acts_as_taggable # Alias for acts_as_taggable_on :tags
