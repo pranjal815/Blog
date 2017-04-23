@@ -1,6 +1,10 @@
 body {
   background-color: $light-gray;
+  min-height: 400px;
+  margin-bottom: 60px;
+  clear: both;
 }
+
 
 h1, .card-title{
   font-weight: bold;

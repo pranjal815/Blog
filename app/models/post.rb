@@ -16,6 +16,8 @@
 #
 
 class Post < ApplicationRecord
+  make_flagger
+  has_many :comments
 
   acts_as_taggable # Alias for acts_as_taggable_on :tags
 
@@ -26,7 +28,7 @@ class Post < ApplicationRecord
 
   scope :most_recent, -> { order(published_at: :desc)}
   scope :published, -> {where(published: true)}
-  scope :recent_pagination, -> (page) {most_recent.paginate(:page => page, :per_page => 4)}
+  scope :recent_pagination, -> (page) {most_recent.paginate(:page => page, :per_page => 9)}
   scope :with_tag, -> (tag) {tagged_with(tag) if tag.present?}
 
   scope :list_for, -> (page, tag) do
@@ -45,12 +47,17 @@ class Post < ApplicationRecord
     end
   end
 
+
   def publish
     update(published: true, published_at: Time.now)
   end
 
   def unpublish
     update(published: false, published_at: nil)
+  end
+
+  def self.search(search)
+    @posts = Post.where(["slug::text like ?","%#{search}%"])
   end
 
 end

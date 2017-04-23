@@ -1,13 +1,13 @@
 Rails.application.routes.draw do
 
+  #Contact us Page routes
+  resources :contacts, only: [:new, :create]
+  #get '/contacts' => 'contacts#create'
+
   devise_for :authors
   root to: 'blog/posts#index'
 
   get '/signup' => 'signups#create_author'
-
-  #Contact us Page routes
-  match '/contact', to: 'contacts#new', via: 'get'
-  resources "contacts", only: [:new, :create]
 
   namespace :authors do
     get '/account' => 'accounts#edit', as: :account
@@ -17,6 +17,8 @@ Rails.application.routes.draw do
     resources :posts do
       put 'published' => 'posts#publish', on: :member
       put 'unpublished' => 'posts#unpublish', on: :member
+
+      #resources :comments
     end
   end
 

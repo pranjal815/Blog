@@ -14,21 +14,29 @@ html,body
   padding-bottom:auto; /* this needs to be bigger than footer height*/
 }
 
-.footer {
-  .fbicon, .twicon, .pticon {
+.navbar-fixed-bottom {
+   .footer-copyright {
+    }
+
+  .icon {
      display: inline-block;
      float: right;
      position: relative;
    }
+  background-color: #212121;
   display: inline-block;
-  position: relative;
+  position: fixed;
   text-align: left;
   left:0px;
   bottom:0px;
-  height:auto;
+  height: 4em;
   width:100%;
-  background:#999;
   color: #ffffff;
 }
-
+#below{
+  width: 100%;
+  height: 300px;
+  background-color: white;
+  clear: both;
+}
 

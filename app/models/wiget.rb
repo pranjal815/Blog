@@ -1,0 +1,2 @@
+class Wiget < ApplicationRecord
+end

@@ -1,0 +1,26 @@
+.user-form {
+  > div {
+    display: block;
+    margin: 1em 0;
+  }
+
+  label {
+    padding-right: 0.5em;
+    &:after {
+      content: ':'
+    }
+  }
+
+  .hide{
+    display: none !important;
+  }
+
+  .actions {
+  }
+}
+
+.field_with_errors{
+  input, textarea{
+    border: 1px solid #EF4F4F;
+  }
+}

@@ -1,4 +1,7 @@
 <%= provide(:contact_active, 'active') %>
+<% content_for(:sidebar) do %>
+    <%= render :partial => 'shared/sidebar' %>
+<% end %>
 <div align="center">
   <h3>Send A message to Us</h3>
 

@@ -3,7 +3,13 @@
 @import "colors";
 @import "base";
 @import "navbar";
+@import "sidebar";
 @import "posts";
 @import "util";
 @import "footer";
 @import "about_us";
+
+.hidden{
+  display: none;
+}
+

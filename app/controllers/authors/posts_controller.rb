@@ -6,12 +6,15 @@ module Authors
     # GET /posts
     # GET /posts.json
     def index
+      #@posts = Post.all
       @posts = current_author.posts.most_recent
     end
 
     # GET /posts/1
     # GET /posts/1.json
     def show
+      @post = Post.find(params[:id])
+      @posts = Post.includes(:comments).order("created_at desc").limit(5).offset(1)
     end
 
     # GET /posts/new

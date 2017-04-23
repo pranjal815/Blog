@@ -1,8 +1,11 @@
 <%= provide(:about_active, 'active') %>
+<% content_for(:sidebar) do %>
+    <%= render :partial => 'shared/sidebar' %>
+<% end %>
 <div class="span4">
   <div style="text-align:center">
       <div class="img">
-        <%= image_tag 'http://www.pistis.com.mx/media/wysiwyg/infortis/pistis-sell-banner.png', :align => 'middle', :size => '1150x300', :style => "border 1px solid #00000;" %>
+        <%= image_tag 'http://www.pistis.com.mx/media/wysiwyg/infortis/pistis-sell-banner.png', :align => 'middle', :size => '810x300', :style => "border 1px solid #00000;" %>
       </div>
    </div>
 </div>

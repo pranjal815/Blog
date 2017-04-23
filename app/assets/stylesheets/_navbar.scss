@@ -2,7 +2,7 @@
   .container {
     height: 5em;
   }
-  border-radius: 0;
+  border-style: none;
   margin-bottom: 40px;
   background-color: #002F49;
     .navbar-brand {
@@ -27,8 +27,17 @@
     &.active{
       color: $primary-color;
     }
-
   }
+  .nav-item.author-nav {
+    img {
+      display: inline-block;
+      height: 20px;
+      width: 20px;
+      border: 1px solid $primary-color-light;
+      border-radius: 50%;
+    }
+  }
+
 }
 
 /*search bar and submit button*/

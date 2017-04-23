@@ -1,24 +1,27 @@
-<%= provide(:contact_active, 'active') %>
-<div class="page-header">
-  <h1>Send A message to Us</h1>
-</div>
-<div class="container-fluid">
+<% content_for(:sidebar) do %>
+    <%= render :partial => 'shared/sidebar' %>
+<% end %>
+<h1 id="page_title">
+  Contact US
+</h1>
 
-    <div class="panel panel-default">
-      <div class="panel-heading">Message US</div>
-        <div class="panel-body">
-          <%= simple_form_for @contact, :html => {:class => 'form-horizontal' } do |f| %>
-          <%= f.input :name, :required => true %>
-          <%= f.input :email, :required => true %>
-          <%= f.input :message, :as => :text, :required => true %>
-          <div class= "hidden">
-            <%= f.input :nickname, :hint => 'Leave this field blank!' %>
-          </div>
-            <div>
-              </br>
-              <%= f.button :submit, 'Send message', :class=> "btn btn-primary" %>
-            </div>
-            <% end %>
-        </div>
-      </div>
+
+<div class="skinny_wrapper wrapper-padding">
+  <%= form_for @contact do |f| %>
+    <%= f.label :name %><br>
+    <%= f.text_field :name, required: true %>
+    <br>
+    <%= f.label :email %><br>
+    <%= f.email_field :email, required: true %>
+    <br>
+    <%= f.label :message %><br>
+    <%= f.text_area :message, as: :text %>
+    <br>
+    <div class="hidden">
+      <%= f.label :nickname %>
+      <%= f.text_field :nickname, hint: 'Leave this field blank!' %>
     </div>
+    <br>
+      <%= f.submit 'Send Message', class: "button", data: {confirm: "Thank You for contacting us. Our Representatives will soon get back to you!!!"} %>
+    <% end %>
+</div>

@@ -20,6 +20,10 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.2'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
+gem 'bootstrap_form'
+gem 'rspec-rails'
+gem 'email_validator'
+gem 'make_flaggable', :git => 'git://github.com/cavneb/make_flaggable.git'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -43,6 +47,7 @@ gem 'will_paginate', '~> 3.1.0'
 gem 'acts-as-taggable-on', '~> 4.0'
 gem 'mail_form'
 gem 'simple_form'
+gem 'letter_opener'
 
 #AWS Configuration
 gem 'figaro'
@@ -54,6 +59,9 @@ group :development, :test do
   gem 'capistrano-rails', require: false
   gem 'capistrano-bundler', require: false
   gem 'capistrano-rvm'
+  gem 'capybara'
+  gem 'capybara-email'
+  gem 'launchy'
 end
 
 group :development, :test do

@@ -1,5 +1,8 @@
 <% provide(:page_title, @post.title) %>
 <%= provide(:authors, 'active') %>
+<% content_for(:sidebar) do %>
+    <%= render :partial => 'shared/sidebar' %>
+<% end %>
 
 <div>
   <td><%= link_to 'Edit', edit_authors_post_path(@post), class: 'btn btn-sm btn-warning' %></td>

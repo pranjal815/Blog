@@ -1,8 +1,6 @@
-<div>
-  <% flash.each do |key, value| %>
-      <div>
-        <a href="#" data-dismiss="alert">×</a>
-        <%= value %>
-      </div>
-  <% end %>
-</div>
+<% content_for(:sidebar) do %>
+    <%= render :partial => 'shared/sidebar' %>
+<% end %>
+<h1 id="page_title">
+  Say Hello
+</h1>

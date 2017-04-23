@@ -1,5 +1,8 @@
 <% provide(:page_title, 'All Post') %>
 <%= provide(:authors, 'active') %>
+<% content_for(:sidebar) do %>
+    <%= render :partial => 'shared/sidebar' %>
+<% end %>
 
 <div class="row">
   <div>
