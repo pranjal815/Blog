@@ -1,10 +1,3 @@
-GIT
-  remote: git://github.com/cavneb/make_flaggable.git
-  revision: cb61243d8200fb67d666fb7679e57934305aae49
-  specs:
-    make_flaggable (0.1.1)
-      activerecord (>= 3.0.0)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -299,7 +292,6 @@ DEPENDENCIES
   letter_opener
   listen (~> 3.0.5)
   mail_form
-  make_flaggable!
   pg
   pry-rails
   puma (~> 3.0)

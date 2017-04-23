@@ -23,7 +23,6 @@ gem 'coffee-rails', '~> 4.2'
 gem 'bootstrap_form'
 gem 'rspec-rails'
 gem 'email_validator'
-gem 'make_flaggable', :git => 'git://github.com/cavneb/make_flaggable.git'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
