@@ -1,6 +1,6 @@
 <div class="row">
 <!-- Basic Info Section -->
-  <%= form_tag authors_info_path, method: :put do %>
+  <%= form_tag authors_info_path, method: :put, multipart: true  do %>
     <%= fields_for :author do |f| %>
       <div class="col-md-6">
         <div class="card">

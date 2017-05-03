@@ -9,10 +9,8 @@ class ApplicationController < ActionController::Base
 
   def configure_permitted_parameters
     #devise_parameter_sanitizer.for(:sign_up) { |authors_params| authors_params.permit(:name, :email, :password, :avatar) }
-    devise_parameter_sanitizer.permit(:sign_up, keys: [:name, :email, :password, :current_password, :avatar])
+    devise_parameter_sanitizer.permit(:sign_up, keys: [:name, :email, :password, :current_password, :avatar,:avatar_cache])
     #devise_parameter_sanitizer.for(:account_update) { |authors_params| authors_params.permit(:name, :email, :password, :current_password, :avatar) }
   end
-
-
 
 end

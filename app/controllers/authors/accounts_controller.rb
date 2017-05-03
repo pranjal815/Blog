@@ -34,7 +34,7 @@ module Authors
 
     private
     def author_info_params
-      params.require(:author).permit(:name, :email, :bio, :avatar)
+      params.require(:author).permit(:name, :email, :bio, :avatar,:avatar_cache)
     end
 
     def author_password_params

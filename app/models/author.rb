@@ -54,9 +54,9 @@ class Author < ApplicationRecord
     update(password: attributes[:new_password], password_confirmation: attributes[:new_password_confirmation])
   end
 
-  def gravatar_image_url
+  def avatar_image_url
     @author = Author.find(params[:id])
-    send_data @author.avatar, :type => 'image/jpg', :disposition => 'inline'
+    send_data @author.avatar.url(:thumb), :type => 'image/jpg', :disposition => 'inline'
   end
 
 
