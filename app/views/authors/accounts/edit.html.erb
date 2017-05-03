@@ -11,7 +11,7 @@
           </div>
             <ul class="list-group list-group-flush">
               <li class="list-group-item">
-                <%= image_tag(current_author.gravatar_image_url) %>
+                <%= image_tag(current_author.avatar) %>
               </li>
               <li class="list-group-item">
                 <div class="field">
@@ -29,6 +29,14 @@
                 <div class="field">
                   <%= f.label :bio %>
                   <%= f.text_area :bio, value: current_author.bio, class: 'form-control' %>
+                </div>
+              </li>
+              <li class="list-group-item">
+                <div class="field">
+                  <%= f.label :avatar do %>
+                      <%= f.file_field :avatar %>
+                      <%= f.hidden_field :avatar_cache, value: current_author.avatar %>
+                  <% end %>
                 </div>
               </li>
               <li class="list-group-item">

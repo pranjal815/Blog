@@ -18,9 +18,15 @@
             <li class="list-group-item">
               <%= link_to 'Log Out', destroy_author_session_path, method: :delete, class: "nav-link" %>
             </li>
+            <li class="round-image-50">
+              <%= image_tag(current_author.avatar.url(:thumb)) %>
+            </li>
         <% else %>
             <li class="list-group-item">
               <%= link_to 'Sign In', authors_posts_path, class: "nav-link #{yield(:author)}" %>
+            </li>
+            <li class="list-group-item">
+              <%= link_to 'Sign Up', new_author_registration_path, class: "dropdown-item" %>
             </li>
         <% end %>
       </ul>
@@ -41,7 +47,8 @@
         <span class="icon-bar"></span>
       </button>
 
-      <a class="navbar-brand" href="/"><img class="img-responsive2" src ="http://www.pistis.com.mx/skin/frontend/ultimo/default/images/logo.png"> </a>
+      <a class="navbar-brand" href="/"><img class="img-responsive2" src ="http://www.pistis.com.mx/skin/frontend/ultimo/default/images/logo.png">
+      </a>
 
       <%= form_tag(posts_path, method: 'get', class: 'navbar-form navbar-right') do %>
           <%= search_field_tag :search, nil, class: 'form-control', placeholder: 'Search here..'  %>
@@ -68,8 +75,8 @@
         <li class="nav-item dropdown author-nav">
           <% if author_signed_in? %>
               <a class="nav-link dropdown-toggle <%= yield(:author) %>" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <%= image_tag(current_author.gravatar_image_url) %>
-                <%= current_author.display_name %>
+                <%= image_tag(current_author.avatar.url(:thumb)) %>
+                <%= current_author.name %>
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                 <%= link_to 'My Post', authors_posts_path, class: "dropdown-item " %>
@@ -77,6 +84,11 @@
                 <%= link_to 'Account', authors_account_path, class: "dropdown-item" %>
                 <br>
                 <%= link_to 'Log Out', destroy_author_session_path, method: :delete, class: "dropdown-item" %>
+                <ul>
+                  <li class="round-image-50">
+                    <%= image_tag(current_author.avatar.url(:thumb)) %>
+                  </li>
+                </ul>
               </div>
           <% else %>
               <a class="nav-link dropdown-toggle <%= yield(:author) %>" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -85,7 +97,7 @@
               <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                 <%= link_to 'Sign In', authors_posts_path, class: "dropdown-item" %>
                 <br>
-                <%= link_to 'Sign Up', signup_path, class: "dropdown-item" %>
+                <%= link_to 'Sign Up', new_author_registration_path, class: "dropdown-item" %>
               </div>
           <% end %>
         </li>

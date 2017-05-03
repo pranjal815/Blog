@@ -12,6 +12,11 @@ module Authors
       redirect_to authors_account_path
     end
 
+    def signup
+
+    end
+
+
     def change_password
       author = current_author
       if author.valid_password?(author_password_params[:current_password])
@@ -29,7 +34,7 @@ module Authors
 
     private
     def author_info_params
-      params.require(:author).permit(:name, :email, :bio)
+      params.require(:author).permit(:name, :email, :bio, :avatar)
     end
 
     def author_password_params

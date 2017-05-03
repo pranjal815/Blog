@@ -23,6 +23,11 @@ gem 'coffee-rails', '~> 4.2'
 gem 'bootstrap_form'
 gem 'rspec-rails'
 gem 'email_validator'
+gem 'carrierwave'
+gem 'mini_magick'
+#Upload Authors or User image
+source 'https://rubygems.org'
+gem 'paperclip', '~> 4.1'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'

@@ -21,22 +21,21 @@
 class Author < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :registerable, :timeoutable and :omniauthable
-  devise :database_authenticatable,
+  devise :database_authenticatable,:registerable,
          :recoverable, :rememberable, :trackable, :validatable
-
+  mount_uploader :avatar, AvatarUploader
   has_many :posts
+  has_many :authors, through: :posts
 
   validates_presence_of :name, on: :update
 
-  def change_password(attributes)
-    update(password: attributes[:new_password], password_confirmation: attributes[:new_password_confirmation])
-  end
+  has_attached_file :avatar, :styles => { :medium => "300x300>", :thumb => "100x100#" }, :default_url => "/images/:style/missing.png"
+  validates_attachment_content_type :avatar, :content_type => /\Aimage\/.*\Z/
 
-  def gravatar_image_url
-      "https://www.gravatar.com/avatar/#{gravtar_hash}"
+  # Author Avatar Validation
+  validates_integrity_of  :avatar
+  validates_processing_of :avatar
 
-
-  end
 
   def display_name
     if name.present?
@@ -47,8 +46,27 @@ class Author < ApplicationRecord
   end
 
   private
+  def avatar_size_validation
+    errors[:avatar] << "should be less than 500KB" if avatar.size > 0.5.megabytes
+  end
+
+  def change_password(attributes)
+    update(password: attributes[:new_password], password_confirmation: attributes[:new_password_confirmation])
+  end
+
+  def gravatar_image_url
+    @author = Author.find(params[:id])
+    send_data @author.avatar, :type => 'image/jpg', :disposition => 'inline'
+  end
+
+
+
+
+  private
 
   def gravtar_hash
     Digest::MD5.hexdigest(email.downcase)
   end
+
+
 end

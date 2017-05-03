@@ -4,28 +4,28 @@
 
   <title><%= yield(:page_title) %> | PISTISBlog</title>
   <%= csrf_meta_tags %>
-
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   <script src="//cloud.tinymce.com/stable/tinymce.min.js"></script>
 </head>
 
 <body>
-
   <div id="wrapper">
     <div id="header">
-      <%= render 'shared/navbar' %>
-        <% if flash.any? %>
-          <% flash.keys.each do |key| %>
-              <div class="alert alert-<%= key.to_s %> alert-dismissible" role="alert">
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-                <%= flash[key] %>
-              </div>
+      <div id="headline">
+        <%= render 'shared/navbar' %>
+          <% if flash.any? %>
+            <% flash.keys.each do |key| %>
+                <div class="alert alert-<%= key.to_s %> alert-dismissible" role="alert">
+                  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                  <%= flash[key] %>
+                </div>
 
+            <% end %>
           <% end %>
-        <% end %>
     </div>
 
     <div id="content" class="container <%= controller_name %> <%= action_name %>">
@@ -38,6 +38,7 @@
       <%= render 'shared/footer' %>
     </div>
     <% debug(params) if Rails.env.development? %>
+  </div>
   </div>
 </body>
 </html>

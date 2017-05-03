@@ -89,5 +89,4 @@ module Authors
       params.require(:post).permit(:title, :body, :description, :banner_image_url, :tag_list)
     end
   end
-
 end
