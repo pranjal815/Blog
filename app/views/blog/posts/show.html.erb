@@ -13,6 +13,8 @@
 
     <div class="author-bio">
       <%= image_tag(@post.author.avatar.url(:thumb)) %>
+      <!--Production -->
+      <!--%= image_tag "/public#{@post.author.avatar.url(:thumb)}" %-->
       <h4><%= @post.author.name %></h4>
       <h6 class="bio"><%= @post.author.bio %></h6>
     </div>

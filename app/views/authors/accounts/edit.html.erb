@@ -11,7 +11,9 @@
           </div>
             <ul class="list-group list-group-flush">
               <li class="list-group-item">
-                <%= image_tag(current_author.avatar) %>
+                <%= image_tag current_author.avatar %>
+                <!--Production -->
+                <!--%= image_tag "/public#{current_author.avatar}" %-->
               </li>
               <li class="list-group-item">
                 <div class="field">
