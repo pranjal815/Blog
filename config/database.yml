@@ -13,7 +13,7 @@ development:
   #username: root
   #password: pran_pis_blog_123
   username: postgres
-  password: gauhar@12
+  password: 
 
 test:
   adapter: postgresql
