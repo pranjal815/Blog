@@ -1,42 +1,44 @@
 html,body
 {
   height:auto;
+  overflow-x: hidden;
 }
 
-#wrap
-{
-  min-height: 100%;
-}
 
-#main
-{
-  overflow:auto;
-  padding-bottom:auto; /* this needs to be bigger than footer height*/
+footer {
+  padding: 10px 0;
+  background-color: black;
 }
+.bd-footer {
+  padding: 4rem 0;
+  margin-top: 4rem;
+  font-size: 85%;
+  text-align: center;
+  background-color: #f7f7f7;
 
-.navbar-fixed-bottom {
-   .footer-copyright {
+  a {
+    font-weight: 500;
+    color: gray;
+
+    &:hover {
+      color: whitesmoke;
     }
+  }
 
-  .icon {
-     display: inline-block;
-     float: right;
-     position: relative;
-   }
-  background-color: #212121;
-  display: inline-block;
-  position: fixed;
-  text-align: left;
-  left:0px;
-  bottom:0px;
-  height: 4em;
-  width:100%;
-  color: #ffffff;
-}
-#below{
-  width: 100%;
-  height: 300px;
-  background-color: white;
-  clear: both;
+  p {
+    margin-bottom: 0;
+  }
 }
 
+.bd-footer-links {
+  padding-left: 0;
+  margin-bottom: 1rem;
+
+  li {
+    display: inline-block;
+
+    + li {
+      margin-left: 1rem;
+    }
+  }
+}

@@ -1,17 +1,17 @@
 <div id="wrapper">
   <div id="upright">
     <div class='span2 sidebar'>
-        <h4>All Post</h4>
-          <% if @posts %>
-            <% @posts.each do |post| %>
-                <h5 class="headline smaller-font">
-                  <%= link_to post.title, post %>
-                </h5>
-            <% end %>
-            <!--<h4>Most Read</h4>-->
+      <h4>All Post</h4>
+      <% if @posts %>
+          <% @posts.each do |post| %>
+              <h5 class="headline smaller-font">
+                <%= link_to post.title, post %>
+              </h5>
           <% end %>
-      </div>
+          <!--<h4>Most Read</h4>-->
+      <% end %>
     </div>
+  </div>
 </div>
 
 

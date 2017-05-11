@@ -2,6 +2,7 @@ Rails.application.routes.draw do
 
   #Contact us Page routes
   resources :contacts, only: [:new, :create]
+  get '/contacts' => 'contacts#create', as: :create
 
   devise_for :authors
   root to: 'blog/posts#index'

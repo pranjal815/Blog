@@ -1,6 +1,45 @@
-<% content_for(:sidebar) do %>
-    <%= render :partial => 'shared/sidebar' %>
-<% end %>
-<h1 id="page_title">
-  Say Hello
-</h1>
+<!--% content_for(:sidebar) do %-->
+    <!--%= render :partial => 'shared/sidebar' %-->
+<!--% end %-->
+<script>
+
+    /***********************************************
+     * Refresh page Script- (c) Dynamic Drive (http://www.dynamicdrive.com)
+     * Please keep this notice intact
+     * Visit http://www.dynamicdrive.com/ for this script and 100s more.
+     ***********************************************/
+
+    function refreshpage(interval, countdownel, totalel){
+        var countdownel = document.getElementById(countdownel)
+        var totalel = document.getElementById(totalel)
+        var timeleft = interval+1
+        var countdowntimer
+
+        function countdown(){
+            timeleft--
+            countdownel.innerHTML = timeleft
+            if (timeleft == 0){
+                clearTimeout(countdowntimer)
+                window.location.replace('.')
+            }
+            countdowntimer = setTimeout(function(){
+                countdown()
+            }, 1000)
+        }
+
+        countdown()
+    }
+
+    window.onload = function(){
+        refreshpage(10, "countdown") // refreshpage(duration_in_seconds, id_of_element_to_show_result)
+    }
+
+</script>
+
+<style>
+  body{ background-color: #ffffff; }
+</style>
+<div class="container">
+  <div>This page will be <a href="javascript:window.location.replace('.')"> refreshed </a> in <b id="countdown"></b> seconds</div>
+  <%= image_tag 'thank-you.jpg' %>
+</div>

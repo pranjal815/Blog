@@ -1,99 +1,43 @@
 .navbar {
-  .container {
-    margin: auto;
-    max-width: 1200px;
-  }
-  border-style: none;
-  margin-bottom: 40px;
-  background-color: #002F49;
-    .navbar-brand {
-    font-weight: bolder;
-      color: $accent-color;
-    .light {
-      font-weight: 300;
-      color: $primary-color-text;
-    }
-
-    .img-responsive2 {
+    background-color: #002F49;
+    text-align: right;
+    .navbar-nav {
+      width: 100%;
+      text-align: center;
+      > li {
+        padding-left:15px;
+        padding-right:15px;
+        float: right;
         display: inline-block;
-        max-width: 60%;
-        height: auto;
-     }
-  }
-  .navbar-toggler {
-    outline: none;
-  }
-  .nav-link {
-      color: $primary-color-light !important;
-    &.active{
-      color: $primary-color;
+      }
     }
-  }
-  .nav-item.author-nav {
+    .navbar-form{
+      float: left;
+    }
+    .navbar-brand{
+      float:left;
+      padding-top: 3px;
+      }
+    /*Author round image */
+    .nav-item.author-nav {
     img {
       display: inline-block;
       height: 20px;
       width: 20px;
       border: 1px solid $primary-color-light;
       border-radius: 50%;
+      }
     }
-  }
 
-}
-
-/*search bar and submit button*/
-.navbar-form {
-  padding-top: 16px;
-  padding-bottom: 0px;
-  .form-control{
-    padding: 6px 68px;
-    text-align: left;
-  }
-  .btn {
-    background-color: #4CAF50; /* Green */
-    border: none;
-    color: white;
-    padding: 7px 18px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 14px;
-  }
-}
-
-.navbar-nav {
-  padding-top: 25px;
-  padding-bottom: 0px;
-  a.nav-link.active {
-    background-color: #002F49;
-    color: #ffffff;
-    font-weight: bold;
-  }
-}
-
-
-.collapse-bg {
-  padding: 0 !important;
-  .card {
-    position: relative;
-    margin-bottom: 50px;
-    border-radius: 0;
-    border: none;
-  }
-}
-
-.collapse-bg .card .list-group-item {
-  padding: 0;
-  border-radius: 0 !important;
-  border-color: black;
-  a {
-    background-color: #002F49;
-    color: #002F49;
-    width: 100%;
-    height: 100%;
-    &:active {
-      color: #002F49;
-      border-bottom: none;
+    .btn {
+      background-color: #4CAF50; /* Green */
+      border: none;
+      color: white;
+      padding: 7px 18px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 14px;
     }
-  }
 }
+

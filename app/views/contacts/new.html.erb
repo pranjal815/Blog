@@ -1,27 +1,40 @@
-<% content_for(:sidebar) do %>
-    <%= render :partial => 'shared/sidebar' %>
-<% end %>
-<h1 id="page_title">
-  Contact US
-</h1>
+<!--% content_for(:sidebar) do %-->
+<!--%= render :partial => 'shared/sidebar' %-->
+<!--% end %-->
+  <style>
+    body{ background-color: #ffffff; }
+  </style>
+  <div class="center">
+    <h1 id="page_title">
+      <%= image_tag 'CONTACT-US.jpg' %>
+    </h1>
+  </div>
 
+  <div class="container">
 
-<div class="skinny_wrapper wrapper-padding">
-  <%= form_for @contact do |f| %>
-    <%= f.label :name %><br>
-    <%= f.text_field :name, required: true %>
-    <br>
-    <%= f.label :email %><br>
-    <%= f.email_field :email, required: true %>
-    <br>
-    <%= f.label :message %><br>
-    <%= f.text_area :message, as: :text %>
-    <br>
-    <div class="hidden">
-      <%= f.label :nickname %>
-      <%= f.text_field :nickname, hint: 'Leave this field blank!' %>
+      <%= form_for @contact do |f| %>
+        <div class="form-group row">
+          <%= f.label :name %><br>
+          <%= f.text_field :name, required: true %>
+          <br>
+        </div>
+        <div class="form-group row">
+          <%= f.label :email %><br>
+          <%= f.email_field :email, required: true %>
+          <br>
+        </div>
+        <div class="form-group row">
+          <%= f.label :message %><br>
+          <%= f.text_area :message, as: :text %>
+          <br>
+        </div>
+        <div class="hidden">
+          <%= f.label :nickname %>
+          <%= f.text_field :nickname, hint: 'Leave this field blank!' %>
+        </div>
+        <div class="form-group row">
+          <%= f.submit 'Send Message', class: "button", data: {confirm: "Thank You for contacting us. Our Representatives will soon get back to you!!!"} %>
+        </div>
+      <% end %>
     </div>
-    <br>
-      <%= f.submit 'Send Message', class: "button", data: {confirm: "Thank You for contacting us. Our Representatives will soon get back to you!!!"} %>
-    <% end %>
-</div>
+  </div>

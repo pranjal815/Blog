@@ -13,7 +13,7 @@ module Authors
     # GET /posts/1
     # GET /posts/1.json
     def show
-      @post = Post.find(params[:id])
+      @posts = Post.find(params[:id])
       @posts = Post.includes(:comments).order("created_at desc").limit(5).offset(1)
     end
 

@@ -1,5 +1,9 @@
 class ContactsController < ApplicationController
 
+  def index
+    @post = Post.all
+  end
+
   def new
     @contact = Contact.new
   end
@@ -8,10 +12,11 @@ class ContactsController < ApplicationController
     @contact = Contact.new(params[:contact])
     @contact.request = request
       if @contact.deliver
-        flash.now[:error] = "Thank You"
-      else
+        flash.now[:error] = ""
+       else
         flash[:error] = "Cannot send message"
         render :new
       end
+
   end
 end
