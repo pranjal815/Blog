@@ -2,45 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="080993ab-e02e-4280-9fd6-afb2a0801b02" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/stylesheets/_new.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/stylesheets/bootstrap-responsive.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/stylesheets/normalize.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/images/pistis-sell-banner.png" afterPath="$PROJECT_DIR$/app/assets/images/pistis-sell-banner.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images/medium/missing.png" afterPath="$PROJECT_DIR$/public/images/medium/missing.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images/thumb/missing.png" afterPath="$PROJECT_DIR$/public/images/thumb/missing.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/system/authors/avatars/000/000/001/medium/avatar_icon_by_astrolink247-d9xxs6r.jpg" afterPath="$PROJECT_DIR$/public/system/authors/avatars/000/000/001/medium/avatar_icon_by_astrolink247-d9xxs6r.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/system/authors/avatars/000/000/001/original/avatar_icon_by_astrolink247-d9xxs6r.jpg" afterPath="$PROJECT_DIR$/public/system/authors/avatars/000/000/001/original/avatar_icon_by_astrolink247-d9xxs6r.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/system/authors/avatars/000/000/001/thumb/avatar_icon_by_astrolink247-d9xxs6r.jpg" afterPath="$PROJECT_DIR$/public/system/authors/avatars/000/000/001/thumb/avatar_icon_by_astrolink247-d9xxs6r.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.rakeTasks" afterPath="$PROJECT_DIR$/.idea/.rakeTasks" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/PISTIS_Blog.iml" afterPath="$PROJECT_DIR$/.idea/PISTIS_Blog.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/runConfigurations/Development__PISTIS_Blog.xml" afterPath="$PROJECT_DIR$/.idea/runConfigurations/Development__PISTIS_Blog.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/_base.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/_base.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/_colors.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/_colors.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/_footer.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/_footer.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/_navbar.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/_navbar.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/_posts.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/_posts.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/contacts.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/contacts.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/authors/posts_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/authors/posts_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/contacts_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/contacts_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/uploader/avatar_uploader.rb" afterPath="$PROJECT_DIR$/app/uploader/avatar_uploader.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/blog/pages/about.html.erb" afterPath="$PROJECT_DIR$/app/views/blog/pages/about.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/blog/pages/contact.html.erb" afterPath="$PROJECT_DIR$/app/views/blog/pages/contact.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/contacts/create.html.erb" afterPath="$PROJECT_DIR$/app/views/contacts/create.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/contacts/new.html.erb" afterPath="$PROJECT_DIR$/app/views/contacts/new.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/author.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/author.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/blog.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/blog.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/shared/_footer.html.erb" afterPath="$PROJECT_DIR$/app/views/shared/_footer.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/shared/_navbar.html.erb" afterPath="$PROJECT_DIR$/app/views/shared/_navbar.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/shared/_sidebar.html.erb" afterPath="$PROJECT_DIR$/app/views/shared/_sidebar.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/database.yml" afterPath="$PROJECT_DIR$/config/database.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/initializers/carrier_wave.rb" afterPath="$PROJECT_DIR$/config/initializers/carrier_wave.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20170501030228_add_avatar_to_authors.rb" afterPath="$PROJECT_DIR$/db/migrate/20170501030228_add_avatar_to_authors.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20170501155046_add_avatars_to_authors.rb" afterPath="$PROJECT_DIR$/db/migrate/20170501155046_add_avatars_to_authors.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/fog.rb" afterPath="$PROJECT_DIR$/lib/fog.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/development.log" afterPath="$PROJECT_DIR$/log/development.log" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -96,8 +58,8 @@
       <file leaf-file-name="database.yml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/config/database.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
-              <caret line="24" column="20" lean-forward="false" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="20" />
+            <state relative-caret-position="177">
+              <caret line="18" column="9" lean-forward="false" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -235,7 +197,7 @@
     <option name="CUSTOM_FILTER" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1415" />
+    <option name="x" value="49" />
     <option name="y" value="-4" />
     <option name="width" value="1317" />
     <option name="height" value="772" />
@@ -756,7 +718,7 @@
       <workItem from="1494277563203" duration="8244000" />
       <workItem from="1494340119182" duration="6729000" />
       <workItem from="1494384550033" duration="6153000" />
-      <workItem from="1494419027198" duration="22963000" />
+      <workItem from="1494419027198" duration="25478000" />
     </task>
     <servers />
   </component>
@@ -766,7 +728,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="412209000" />
+    <option name="totallyTimeSpent" value="414724000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -778,8 +740,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1415" y="-4" width="1317" height="772" extended-state="6" />
-    <editor active="true" />
+    <frame x="49" y="-4" width="1317" height="772" extended-state="6" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21791951" sideWeight="0.4926931" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32886904" sideWeight="0.49013418" order="6" side_tool="false" content_ui="tabs" />
@@ -787,7 +748,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991317" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17857143" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32886904" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.13237411" sideWeight="0.47536013" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.5467626" sideWeight="0.47536013" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24940805" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30791366" sideWeight="0.4735596" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2596685" sideWeight="0.5073069" order="2" side_tool="true" content_ui="tabs" />
@@ -1206,8 +1167,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config/database.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="24" column="20" lean-forward="false" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="20" />
+        <state relative-caret-position="177">
+          <caret line="18" column="9" lean-forward="false" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
           <folding />
         </state>
       </provider>
