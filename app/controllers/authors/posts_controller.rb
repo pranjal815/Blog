@@ -13,7 +13,8 @@ module Authors
     # GET /posts/1
     # GET /posts/1.json
     def show
-      @posts = Post.find(params[:id])
+      #If the below line is uncommented then on adding new post it throws error.
+      #@posts = Post.find(params[:id])
       @posts = Post.includes(:comments).order("created_at desc").limit(5).offset(1)
     end
 

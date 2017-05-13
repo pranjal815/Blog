@@ -27,9 +27,10 @@
       <li class="nav-item dropdown author-nav">
         <% if author_signed_in? %>
             <a class="nav-link dropdown-toggle <%= yield(:author) %>" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <%= image_tag current_author.avatar.url(:thumb) %>
+              <!-- Development -->
+              <!--%= image_tag current_author.avatar.url(:thumb) %-->
               <!--Production -->
-              <!--%= image_tag "/public#{current_author.avatar.url(:thumb)}" %-->
+              <%= image_tag "/public#{current_author.avatar.url(:thumb)}" %>
               <%= current_author.name %>
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">

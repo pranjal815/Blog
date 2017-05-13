@@ -8,7 +8,7 @@
 development:
   adapter: postgresql
   encoding: unicode
-  database: pistis_blog
+  database: pistisblog
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") {5} %>
   #username: root
   #password: pran_pis_blog_123
@@ -18,7 +18,7 @@ development:
 test:
   adapter: postgresql
   encoding: unicode
-  database: pistis_blog_test
+  database: pistisblog_test
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") {5} %>
   #username: root
   #password: pran_pis_blog_123
@@ -31,7 +31,7 @@ test:
 
 production:
   adapter: postgresql
-  database: pistis_blog
+  database: <%= ENV['RDS_DB_NAME'] %>
   username: <%= ENV['RDS_USERNAME'] %>
   password: <%= ENV['RDS_PASSWORD'] %>
   host: <%= ENV['RDS_HOSTNAME'] %>
