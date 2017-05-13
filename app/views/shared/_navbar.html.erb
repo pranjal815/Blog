@@ -5,7 +5,9 @@
     <span class="navbar-toggler-icon"></span>
   </button>
 
-  <a class="navbar-brand" href="/"><img src ="/assets/logo.png"></a>
+  <a class="navbar-brand" href="/">
+    <%= image_tag '/assets/logo.png' %>
+  </a>
     <%= form_tag(posts_path, method: 'get', class: 'navbar-form') do %>
         <%= search_field_tag :search, nil, class: 'form-control',placeholder: 'Search here..'  %>
         <%= submit_tag "Submit", class: 'btn btn-default', :name => nil %>
