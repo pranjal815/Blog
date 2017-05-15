@@ -1,43 +1,41 @@
 .navbar {
-    background-color: #002F49;
-    text-align: right;
-    .navbar-nav {
-      width: 100%;
-      text-align: center;
-      > li {
-        padding-left:15px;
-        padding-right:15px;
-        float: right;
-        display: inline-block;
-      }
+  background-color: #002F49;
+  text-align: right;
+  .navbar-nav {
+    width: 100%;
+    text-align: center;
+    > li {
+      padding-left:15px;
+      padding-right:15px;
+      float: right;
+      display: inline-block;
     }
-    .navbar-form{
-      float: left;
-    }
-    .navbar-brand{
-      float:left;
-      padding-top: 3px;
-      }
-    /*Author round image */
-    .nav-item.author-nav {
+  }
+  .navbar-form{
+    float: left;
+  }
+  .navbar-brand{
+    float:left;
+    padding-top: 3px;
+  }
+  /*Author round image */
+  .nav-item.author-nav {
     img {
       display: inline-block;
       height: 20px;
       width: 20px;
       border: 1px solid $primary-color-light;
       border-radius: 50%;
-      }
     }
-
-    .btn {
-      background-color: #4CAF50; /* Green */
-      border: none;
-      color: white;
-      padding: 7px 18px;
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
-      font-size: 14px;
-    }
+  }
+  .btn {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 7px 18px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+  }
 }
-

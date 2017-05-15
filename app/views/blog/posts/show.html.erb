@@ -5,33 +5,34 @@
 <% end %>
 
 <!-- Post Show-->
-<div class="row">
-  <div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2 text-xs-center">
-    <h1><%= @post.title %></h1>
-    <h4> <%= @post.display_day_published %> </h4>
-    <%= @post.body.html_safe %>
+<div class="container">
+  <div class="row">
+    <div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2 text-xs-center">
+      <h1><%= @post.title %></h1>
+      <h4> <%= @post.display_day_published %> </h4>
+      <%= @post.body.html_safe %>
 
-    <div class="author-bio">
-      <!-- Development -->
-      <!-- %= image_tag(@post.author.avatar.url(:thumb)) %-->
-      <!--Production -->
-      <%= image_tag "/public#{@post.author.avatar.url(:thumb)}" %>
-      <h4><%= @post.author.name %></h4>
-      <h6 class="bio"><%= @post.author.bio %></h6>
-    </div>
-<!--End Post Show-->
+      <div class="author-bio">
+        <!-- Development -->
+        <%= image_tag(@post.author.avatar.url(:thumb)) %>
+        <!--Production -->
+        <!--%= image_tag "/public#{@post.author.avatar.url(:thumb)}" %-->
+        <h4><%= @post.author.name %></h4>
+        <h6 class="bio"><%= @post.author.bio %></h6>
+      </div>
+  <!--End Post Show-->
 
 
 
-    <!--Comments section form -->
-    <div id="disqus_thread">
-      <noscript>
-        Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
-      </noscript>
+      <!--Comments section form -->
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
     </div>
   </div>
 </div>
-
 <script>
 
     /**

@@ -52,6 +52,14 @@
   float: left;
 }
 
+#upright {
+  width: 300px;
+  height: auto;
+  background-color:gainsboro;
+  float: right;
+}
+
+
 .posts.edit, .posts.new {
   .card {
     .card-block{
@@ -103,3 +111,32 @@
   }
 }
 
+@media screen and (max-width: 959px) {
+  #container {
+    width: 100%;
+  }
+  #upleft {
+    width: 70%;
+  }
+  #uright {
+    width: 30%;
+  }
+  img{
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  #upleft {
+    width: 100%;
+  }
+  #uright {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 3200px) {
+  #container{
+    width: 320px ;
+  }
+}

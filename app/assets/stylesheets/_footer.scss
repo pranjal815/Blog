@@ -42,3 +42,22 @@ footer {
     }
   }
 }
+
+@media screen and (max-width: 949px) {
+  #container {
+    width: auto;
+  }
+  img{
+    width: auto;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  #container {
+    width: auto;
+  }
+  img{
+    width: auto;
+  }
+}
+

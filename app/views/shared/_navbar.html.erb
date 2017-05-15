@@ -1,62 +1,58 @@
 <nav class="navbar navbar-toggleable-md fixed-top  bg-inverse">
   <div class="container">
-
-  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-  <a class="navbar-brand" href="/">
-    <%= image_tag '/assets/logo.png' %>
-  </a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="/">
+      <%= image_tag '/assets/logo.png' %>
+    </a>
     <%= form_tag(posts_path, method: 'get', class: 'navbar-form') do %>
         <%= search_field_tag :search, nil, class: 'form-control',placeholder: 'Search here..'  %>
         <%= submit_tag "Submit", class: 'btn btn-default', :name => nil %>
     <% end %>
-
-  <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item ">
-        <%= link_to 'Blog', root_path, class: "nav-link #{yield(:blog_active)}" %>
-      </li>
-      <li class="nav-item ">
-        <%= link_to 'About', about_path, class: "nav-link #{yield(:about_active)}" %>
-      </li>
-      <li class="nav-item ">
-        <%= link_to 'Contact', new_contact_path, class: "nav-link #{yield(:contact_active)}" %>
-      </li>
-      <li class="nav-item dropdown author-nav">
-        <% if author_signed_in? %>
-            <a class="nav-link dropdown-toggle <%= yield(:author) %>" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <!-- Development -->
-              <!--%= image_tag current_author.avatar.url(:thumb) %-->
-              <!--Production -->
-              <%= image_tag "/public#{current_author.avatar.url(:thumb)}" %>
-              <%= current_author.name %>
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <%= link_to 'My Post', authors_posts_path, class: "dropdown-item " %>
-              <br>
-              <%= link_to 'Account', authors_account_path, class: "dropdown-item" %>
-              <br>
-              <%= link_to 'Log Out', destroy_author_session_path, method: :delete, class: "dropdown-item" %>
-            </div>
-        <% else %>
-            <a class="nav-link dropdown-toggle <%= yield(:author) %>" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Author
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <%= link_to 'Sign In', authors_posts_path, class: "dropdown-item" %>
-              <br>
-              <%= link_to 'Sign Up', new_author_registration_path, class: "dropdown-item" %>
-            </div>
-        <% end %>
-      </li>
-
-      <li class="nav-item dropdown">
-        <div class="dropdown-menu" aria-labelledby="dropdown01">
-          <a class="dropdown-item" href=<%= link_to 'Blog', root_path, class: "nav-link #{yield(:blog_active)}" %>>Blog</a>
-          <a class="dropdown-item" href=<%= link_to 'About', about_path, class: "nav-link #{yield(:about_active)}" %>>About</a>
-          <a class="dropdown-item" href=<%= link_to 'Contact', new_contact_path, class: "nav-link #{yield(:contact_active)}" %>>Contact</a>
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item ">
+          <%= link_to 'Blog', root_path, class: "nav-link #{yield(:blog_active)}" %>
+        </li>
+        <li class="nav-item ">
+          <%= link_to 'About', about_path, class: "nav-link #{yield(:about_active)}" %>
+        </li>
+        <li class="nav-item ">
+          <%= link_to 'Contact', new_contact_path, class: "nav-link #{yield(:contact_active)}" %>
+        </li>
+        <li class="nav-item dropdown author-nav">
+          <% if author_signed_in? %>
+              <a class="nav-link dropdown-toggle <%= yield(:author) %>" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <!-- Development -->
+                <%= image_tag current_author.avatar.url(:thumb) %>
+                <!--Production -->
+                <!--%= image_tag "/public#{current_author.avatar.url(:thumb)}" %-->
+                <%= current_author.name %>
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <%= link_to 'My Post', authors_posts_path, class: "dropdown-item " %>
+                <br>
+                <%= link_to 'Account', authors_account_path, class: "dropdown-item" %>
+                <br>
+                <%= link_to 'Log Out', destroy_author_session_path, method: :delete, class: "dropdown-item" %>
+              </div>
+          <% else %>
+              <a class="nav-link dropdown-toggle <%= yield(:author) %>" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Author
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <%= link_to 'Sign In', authors_posts_path, class: "dropdown-item" %>
+                <br>
+                <%= link_to 'Sign Up', new_author_registration_path, class: "dropdown-item" %>
+              </div>
+          <% end %>
+        </li>
+        <li class="nav-item dropdown">
+          <div class="dropdown-menu" aria-labelledby="dropdown01">
+            <a class="dropdown-item" href=<%= link_to 'Blog', root_path, class: "nav-link #{yield(:blog_active)}" %>>Blog</a>
+            <a class="dropdown-item" href=<%= link_to 'About', about_path, class: "nav-link #{yield(:about_active)}" %>>About</a>
+            <a class="dropdown-item" href=<%= link_to 'Contact', new_contact_path, class: "nav-link #{yield(:contact_active)}" %>>Contact</a>
             <% if author_signed_in? %>
                 <a class="dropdown-item" href=<%= link_to 'My Post', authors_posts_path, class: "nav-link #{yield(:author)}" %>>My Post</a>
                 <a class="dropdown-item" href=<%= link_to 'Log Out', destroy_author_session_path, method: :delete, class: "nav-link" %>>Log Out</a>
@@ -65,10 +61,9 @@
                 <a class="dropdown-item" href=<%= link_to 'Sign In', authors_posts_path, class: "nav-link #{yield(:author)}" %>>Sign In</a>
                 <a class="dropdown-item" href=<%= link_to 'Sign Up', new_author_registration_path, class: "dropdown-item" %>>Sign Up</a>
             <% end %>
-        </div>
-      </li>
-    </ul>
-
-  </div>
+          </div>
+        </li>
+      </ul>
+    </div>
   </div>
 </nav>
